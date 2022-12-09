@@ -15,14 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceScoreText: UILabel!
     @IBOutlet weak var diceScoreIndex: UILabel!
     
-        @IBAction func rollPressed(_ sender: Any) {
+    @IBAction func rollPressed(_ sender: Any) {
 //        diceImageView1.image = diceImages.randomElement()
 //        diceImageView2.image = diceImages.randomElement()
         let scoreIndex1 = Int.random(in: 0...5)
         let scoreIndex2 = Int.random(in: 0...5)
         diceImageView1.image = diceImages[scoreIndex1]
         diceImageView2.image = diceImages[scoreIndex2]
-        var result = scoreIndex1+scoreIndex2+2
+        let result = scoreIndex1+scoreIndex2+2
         diceScoreIndex.text = String(result)
         
         
